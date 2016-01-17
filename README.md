@@ -2,7 +2,7 @@
 Go-fuzzy is a Golang fuzzy search implementation that for given keys returns objects with the closest values to an input.
 
 ## Installation
-```
+```bash
 go get github.com/antoan-angelov/go-fuzzy
 ```
 
@@ -10,7 +10,7 @@ go get github.com/antoan-angelov/go-fuzzy
 **keys**  
 The list of properties to use fuzzy search on. It supports nested properties via dot notation.
 
-```
+```go
 type Laptop struct {
   Manufacturer string
   HasFan bool
@@ -51,7 +51,7 @@ Whether to sort the result list by score.
 
 **searchFn**  
 The search function to use. The object must implement Searchable interface:
-```
+```go
 type Searchable interface {
     SetPattern(pattern string, options []string)
     Search(text string)
